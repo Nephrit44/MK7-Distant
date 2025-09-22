@@ -71,6 +71,7 @@
     //Обработка нажатия на кнопки меню
     navButton.addEventListener('click', function(){
         navList.classList.toggle('visible');
+        getlist.classList.toggle('visible');
         navButton.classList.toggle('linkCollection-action');
     })
 
