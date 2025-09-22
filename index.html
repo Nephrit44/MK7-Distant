@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>МК7 Дистант</title>
   </head>
   <body>
@@ -20,16 +20,16 @@
         <h2 class="header_subtitle">Дистанционное обучение</h2>
       </div>
 
-      <button class="navigation">
+      <button class="navigation container">
         <span class="navigation__decor"></span>
         <span class="navigation__decor"></span>
         <span class="navigation__decor"></span>
       </button>
-      <nav class="nav visible">
-        <ul class="nav__list">
-          <li class="nav__item">Список ссылок</li>
-        </ul>
-      </nav>
+
+      <div class="linkCollection container visible">
+          <h2 class="linkCollection__title">Список ссылок:</h2>
+
+      </div>
 
     </header>
 
@@ -54,6 +54,13 @@
       </div>
       <div class="QRCode"></div>
     </li>
+  </template>
+
+  <template id="linkRow">
+    <div class="link__container">
+      <h3 class="link__title"></h3>
+      <textarea class="link__content" rows="2"></textarea>
+    </div>
   </template>
 
   <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>

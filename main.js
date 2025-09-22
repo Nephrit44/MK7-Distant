@@ -1,21 +1,29 @@
-const getTemplate = document.querySelector("#listRow"); //Найти на странице заготовку
-    const getlist = document.querySelector(".list"); //Найти на странице контейне в который грузим
-    const searchButton = document.querySelector(".search__button"); //Найти на странице кнопку поиска
-    const searchInput = document.querySelector(".search__input"); //Найти на странице тексмтовое поле поиска
+    const getTemplateCard = document.querySelector('#listRow'); //Найти на странице заготовку
+    const getlist = document.querySelector('.list'); //Найти на странице контейне в который грузим
+    const searchButton = document.querySelector('.search__button'); //Найти на странице кнопку поиска
+    const searchInput = document.querySelector('.search__input'); //Найти на странице тексмтовое поле поиска
+    const navButton = document.querySelector('.navigation'); //Найти кнопку меню
+    const navList = document.querySelector('.linkCollection'); //Найти навигационное меню
+    const decorElement = document.querySelectorAll('.navigation__decor'); //Найти декаративные элементы
+
+    const linkCollection = document.querySelector('.linkCollection'); //Ищем контейнер куда будут вставлятся ссылки
+    const getTemplateLinkCollection = document.querySelector('#linkRow'); //Ищем шаблон со строкой для ссылок
+
+    showLinkCollection(); //Выводим список в выпадающем меню
 
     //Загрузка списка коллекции
     arrColletion.forEach((element) => {
-      let newElement = getTemplate.content.cloneNode(true); //Содаю клон шаблона
-      newElement.querySelector(".listRow__title").textContent =
+      let newElement = getTemplateCard.content.cloneNode(true); //Создаю клон шаблона карточки
+      newElement.querySelector('.listRow__title').textContent =
         element.groupName; //Ищу заголовок и дабавляю ему данные из коллекции
-      newElement.querySelector(".listRow__link").href = element.groupLink; //Добавление основной ссылки
-      newElement.querySelector(".listRow__secondLink").href =
+      newElement.querySelector('.listRow__link').href = element.groupLink; //Добавление основной ссылки
+      newElement.querySelector('.listRow__secondLink').href =
         element.groupSecondLink; //Добавление запасной ссылки
       generateQRCode(
-        newElement.querySelector(".QRCode"),
+        newElement.querySelector('.QRCode'),
         element.groupSecondLink
       );
-      newElement.querySelector(".listRow__item").dataset.group =
+      newElement.querySelector('.listRow__item').dataset.group =
         element.dataGroup;
       getlist.append(newElement);
     });
@@ -31,10 +39,10 @@ const getTemplate = document.querySelector("#listRow"); //Найти на стр
       });
     }
 
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener('input', function () {
       console.log(searchInput.value);
       //Если значение не пусто, показать эту строку, остальные спрятать
-      if (searchInput.value !== "") {
+      if (searchInput.value !== '') {
         hideAll(searchInput.value);
       } else {
         showAll();
@@ -43,19 +51,35 @@ const getTemplate = document.querySelector("#listRow"); //Найти на стр
 
     //Функция поиска указанной группы
     function hideAll(userValue) {
-      const allRowCollection = document.querySelectorAll(".listRow__item"); //Список всех строк
+      const allRowCollection = document.querySelectorAll('.listRow__item'); //Список всех строк
       allRowCollection.forEach((element) => {
         if (element.dataset.group !== userValue) {
-          element.classList.add("visible");
+          element.classList.add('visible');
         } else {
-          element.classList.remove("visible");
+          element.classList.remove('visible');
         }
       });
     }
 
     function showAll() {
-      const allRowCollection = document.querySelectorAll(".listRow__item"); //Список всех строк
+      const allRowCollection = document.querySelectorAll('.listRow__item'); //Список всех строк
       allRowCollection.forEach((element) => {
-        element.classList.remove("visible");
+        element.classList.remove('visible');
       });
+    }
+
+    //Обработка нажатия на кнопки меню
+    navButton.addEventListener('click', function(){
+        navList.classList.toggle('visible');
+        navButton.classList.toggle('linkCollection-action');
+    })
+
+    //Вывод списка в таблицу выпадающего окна
+    function showLinkCollection(){
+        arrColletion.forEach((element) => {
+            let newElement = getTemplateLinkCollection.content.cloneNode(true); //Создаю клон шаблона строки с сылками
+            newElement.querySelector('.link__title').textContent = element.groupName;
+            newElement.querySelector('.link__content').textContent = element.groupLink;
+            linkCollection.append(newElement);
+        });
     }

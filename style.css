@@ -24,6 +24,10 @@ ul {
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   height: 100vh;
   font-family: var(--mainFont);
@@ -66,20 +70,61 @@ body {
   height: 40px;
   width: 40px;
   top: 0;
-  right: 0;
+  right: 2px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 8px;
+  z-index: 2;
 }
 
 .navigation:active {
-    background-color: var(--transparentColor);
-    transform: translate(1px,1px);
+  background-color: var(--transparentColor);
+  transform: translate(1px, 1px);
 }
 
 .navigation__decor {
-    border: 2px solid var(--accentColor);
+  border: 2px solid var(--accentColor);
+}
+
+.link__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: space-between;
+  border: 1px solid var(--accentColor);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.linkCollection {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  background-color: var(--colorWhite);
+  z-index: 1;
+  inset: 0;
+  padding: 60px 10px 10px 10px;
+  overflow: scroll;
+}
+
+.linkCollection-action {
+  flex-direction: row;
+}
+
+.link__content {
+  max-width: 100%;
+  font-size: 14px;
+  border: none;
+  overflow:hidden;
+}
+
+.link__title {
+  font-family: var(--mainFont);
+  font-size: 16px;
+  line-height: normal;
+  color: var(--accentColor);
 }
 
 .title-group {
@@ -177,5 +222,9 @@ body {
   }
   .listRow__item {
     flex-direction: row;
+  }
+
+  .navigation {
+    right: 22px;
   }
 }
