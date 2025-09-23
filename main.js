@@ -31,8 +31,8 @@
     function generateQRCode(placeElement, urlLink) {
       const qrcode = new QRCode(placeElement, {
         text: urlLink,
-        width: 256,
-        height: 256,
+        width: 128,
+        height: 128,
         colorDark: "#000",
         colorLight: "#fff",
         correctLevel: QRCode.CorrectLevel.H,

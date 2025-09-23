@@ -7,6 +7,7 @@
   --transparentColor: #17548f4d;
   --colorWhite: #fff;
   --mainFont: "Roboto Condensed", sans-serif;
+  --cardBackgroundColor: #f7f7f7;
 }
 
 h1,
@@ -36,6 +37,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: #eae6d1;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
@@ -117,7 +121,7 @@ body {
   max-width: 100%;
   font-size: 14px;
   border: none;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .link__title {
@@ -145,36 +149,99 @@ body {
 
 .list {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
 .listRow__item {
-  min-height: 150px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  border-radius: 6px;
-  border: 1px solid var(--accentColor);
-  background-color: var(--transparentColor);
-  margin-bottom: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--colorWhite);
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.listRow__item::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  height: 120px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(127, 73, 146, 1) 0%,
+    rgba(172, 111, 95, 1) 40%,
+    rgba(255, 181, 0, 1) 100%
+  );
 }
 
 .listRow__title {
-  font-size: 28px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
   color: var(--accentColor);
-  text-shadow: 2px 2px var(--colorWhite);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  background-color: #f7f7f7;
+  z-index: 2;
+  margin-top: 60px;
 }
 
 .QRCode {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid var(--accentColor);
-  background-color: var(--colorWhite);
+  display: flex;
+  justify-content: center;
 }
 .link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  background-color: orange;
   font-size: 22px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: var(--colorWhite);
+  text-align: center;
+}
+
+.listRow__link::before {
+  position: absolute;
+  content: "";
+  background-image: url("./group.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.listRow__secondLink::before {
+  position: absolute;
+  content: "";
+  background-image: url("./callSferum.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .linkGroup {
@@ -182,6 +249,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  width: 100%;
 }
 
 .search {
@@ -222,9 +290,31 @@ body {
   }
   .listRow__item {
     flex-direction: row;
+    padding: 50px;
+    
+  }
+
+  .listRow__item::before {
+    height: 100%;
+    max-width: 230px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
   }
 
   .navigation {
     right: 22px;
   }
+
+  .QRCode {
+    z-index: 2;
+  }
+
+  .linkGroup {
+    width: auto;
+  }
+
+  .listRow__title {
+    margin-top: 0;
+  }
+  
 }
