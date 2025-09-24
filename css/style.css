@@ -116,6 +116,7 @@ body {
   background-color: var(--colorWhite);
   padding: 60px 10px 10px 10px;
   min-width: var(--sectionWidth);
+  border-radius: 20px;
 }
 
 .linkCollection-action {
