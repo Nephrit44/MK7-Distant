@@ -271,9 +271,9 @@ body {
 
 .linkGroup--MAX::after {
   position: absolute;
-  content: "с 04.10.2025";
-  top: -18px;
-  left: 41%;
+  content: "с 04.10.25";
+  top: -17px;
+  left: 37%;
   transform: rotate(-20deg);
   z-index: 3;
 }
@@ -319,31 +319,23 @@ body {
     flex-direction: row;
   }
 
-  .listRow__item--style {
-    padding: 40px;
-  }
-
-  .listRow__item::before {
-    height: 100%;
-    max-width: 200px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 0px;
-  }
-
-  .navigation {
-    right: 22px;
-  }
-
-  .QRCode {
-    z-index: 2;
-  }
-
-  .linkGroup {
-    width: auto;
-  }
-
   .listRow__title {
-    margin-top: 0;
+    margin: 20px;
+  }
+
+  .listRow__item {
+    padding: 0;
+    row-gap: 20px;
+    padding: 30px;
+  }
+
+  .listRow__item--style::before {
+    left: 0;
+    top: 0;
+    max-width: 220px;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
   }
 
 }
