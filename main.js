@@ -16,11 +16,11 @@ arrColletion.forEach((element) => {
   let newElement = getTemplateCard.content.cloneNode(true); //Создаю клон шаблона карточки
   newElement.querySelector('.listRow__title').textContent =
     element.groupName; //Ищу заголовок и дабавляю ему данные из коллекции
-  newElement.querySelector('.listRow__link').href = element.groupLink; //Ссылка на группу сферум
-  newElement.querySelector('.listRow__secondLink').href = element.groupSecondLink; //Ссылка на звонок сферум
+  newElement.querySelector('.link__groupSferum').href = element.groupLink; //Ссылка на группу сферум
+  newElement.querySelector('.link__callSferum').href = element.groupSecondLink; //Ссылка на звонок сферум
 
-  newElement.querySelector('.listRow__linkMAX').href = element.maxGroupLink; //Ссылка на группу MAX
-  newElement.querySelector('.listRow__secondLinkMAX').href = element.maxGroupCall; //Ссылка на звонок MAX
+  newElement.querySelector('.link__groupMAX').href = element.maxGroupLink; //Ссылка на группу MAX
+  newElement.querySelector('.link__callMAX').href = element.maxGroupCall; //Ссылка на звонок MAX
   generateQRCode(
     newElement.querySelector('.QRCode'),
     element.groupSecondLink

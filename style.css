@@ -158,35 +158,32 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
   justify-content: space-between;
   border-radius: 20px;
   border: none;
   background-color: var(--colorWhite);
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 50px;
 }
 
-.listRow__item::before {
+.listRow__item--style::before {
   position: absolute;
   content: "";
-  inset: 0;
-  height: 120px;
+  background: linear-gradient(0deg,
+      rgba(127, 73, 146, 1) 0%,
+      rgba(172, 111, 95, 1) 40%,
+      rgba(255, 181, 0, 1) 100%);
+  width: 100%;
+  height: 160px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background: linear-gradient(
-    0deg,
-    rgba(127, 73, 146, 1) 0%,
-    rgba(172, 111, 95, 1) 40%,
-    rgba(255, 181, 0, 1) 100%
-  );
 }
 
 .listRow__title {
-  height: 120px;
-  width: 120px;
+  position: relative;
+  min-height: 120px;
+  min-width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,14 +192,14 @@ body {
   color: var(--accentColor);
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   background-color: #f7f7f7;
-  z-index: 2;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .QRCode {
   display: flex;
   justify-content: center;
 }
+
 .link {
   position: relative;
   display: block;
@@ -216,10 +213,9 @@ body {
   text-align: center;
 }
 
-.listRow__link::before {
+.link::before {
   position: absolute;
   content: "";
-  background-image: url("./group.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -230,26 +226,56 @@ body {
   transform: translateY(-50%);
 }
 
-.listRow__secondLink::before {
-  position: absolute;
-  content: "";
+.link--iconGroup::before {
+  background-image: url("./group.svg");
+}
+
+.link--iconCall::before {
   background-image: url("./callSferum.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 24px;
-  width: 24px;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .linkGroup {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  width: 100%;
+  width: 90%;
+  padding: 20px;
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.linkGroup::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 32px;
+  width: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -24px;
+  z-index: 3;
+}
+
+.linkGroup--sferum::before {
+  background-image: url("./Sferum_Icon.svg");
+}
+
+.linkGroup--MAX::before {
+  background-image: url("./max-messenger-sign-logo.svg");
+  opacity: 0.3;
+}
+
+.linkGroup--MAX::after {
+  position: absolute;
+  content: "с 04.10.2025";
+  top: -18px;
+  left: 41%;
+  transform: rotate(-20deg);
+  z-index: 3;
 }
 
 .search {
@@ -288,15 +314,18 @@ body {
   .container {
     max-width: 1000px;
   }
+
   .listRow__item {
     flex-direction: row;
-    padding: 50px;
-    
+  }
+
+  .listRow__item--style {
+    padding: 40px;
   }
 
   .listRow__item::before {
     height: 100%;
-    max-width: 230px;
+    max-width: 200px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0px;
   }
@@ -316,5 +345,5 @@ body {
   .listRow__title {
     margin-top: 0;
   }
-  
+
 }
