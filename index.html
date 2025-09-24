@@ -38,11 +38,12 @@
       <input class="search__input" type="number" />
     </search>
 
-    <ul class="list container"></ul>
+    <section class="list container"></section>
   </body>
 
   <template id="listRow">
-    <li class="listRow__item listRow__item--style">
+
+    <div class="listRow__item listRow__item--style">
       <h3 class="listRow__title">П-101СД</h3>
 
       <div class="linkGroup linkGroup--sferum">
@@ -53,6 +54,7 @@
           >ссылка на звонок</a
         >
       </div>
+
       <div class="linkGroup linkGroup--MAX">
         <a class="link link__groupMAX link--iconGroup" href="#" target="_blank"
           >ссылка на группу</a
@@ -62,7 +64,8 @@
         >
       </div>
       <div class="QRCode"></div>
-    </li>
+    </div>
+
   </template>
 
   <template id="linkRow">
