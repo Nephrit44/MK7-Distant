@@ -107,6 +107,7 @@ body {
   border: 1px solid var(--accentColor);
   border-radius: 6px;
   padding: 10px;
+  width: 350px;
 }
 
 .linkCollection {
@@ -115,7 +116,6 @@ body {
   row-gap: 5px;
   background-color: var(--colorWhite);
   padding: 60px 10px 10px 10px;
-  min-width: var(--sectionWidth);
   border-radius: 20px;
 }
 
@@ -167,7 +167,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-  min-width: 350px;
+  min-width: 100%;
   align-items: center;
   border-radius: 20px;
   border: none;
@@ -323,5 +323,13 @@ body {
 @media (min-width: 800px) {
   .container {
     max-width: var(--sectionWidth);
+  }
+
+  .listRow__item {
+    min-width: 350px;
+  }
+
+  .linkCollection {
+    min-width: var(--sectionWidth);
   }
 }
