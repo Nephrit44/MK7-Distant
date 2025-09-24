@@ -8,6 +8,13 @@
   --colorWhite: #fff;
   --mainFont: "Roboto Condensed", sans-serif;
   --cardBackgroundColor: #f7f7f7;
+  --bodyBackground: #ebebeb;
+  --linearGradientStart: rgba(112, 158, 246, 1);
+  --linearGradientFinish: rgba(46, 207, 228, 1);
+  --boxShadowColor: rgba(34, 60, 80, 0.2);
+  --linkColor: #852e7b;
+  --backgroundCard: #f7f7f7;
+  --borderCardColor: #ccc;
 }
 
 h1,
@@ -37,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #ebebeb;
+  background-color: var(--bodyBackground);
   margin: 0;
   padding: 20px;
 }
@@ -170,7 +177,7 @@ body {
 .listRow__item--style::before {
   position: absolute;
   content: "";
-background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1) 100%);
+background: linear-gradient(0deg, var(--linearGradientStart) 0%, var(--linearGradientFinish) 100%);
   width: 100%;
   height: 160px;
   border-top-left-radius: 20px;
@@ -187,8 +194,8 @@ background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1
   border-radius: 50%;
   font-size: 24px;
   color: var(--accentColor);
-  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  background-color: #f7f7f7;
+  box-shadow: 4px 4px 8px 0px var(--boxShadowColor);
+  background-color: var(--backgroundCard);
   margin-top: 20px;
 }
 
@@ -202,7 +209,7 @@ background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1
   display: block;
   text-decoration: none;
   width: 100%;
-  background-color: #852e7b;
+  background-color: var(--linkColor);
   font-size: 22px;
   padding: 10px 40px;
   border-radius: 10px;
@@ -224,11 +231,11 @@ background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1
 }
 
 .link--iconGroup::before {
-  background-image: url("./group.svg");
+  background-image: url("../decor/group.svg");
 }
 
 .link--iconCall::before {
-  background-image: url("./callSferum.svg");
+  background-image: url("../decor/callSferum.svg");
 }
 
 .linkGroup {
@@ -240,7 +247,7 @@ background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1
   width: 90%;
   padding: 20px;
   padding-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--borderCardColor);
   border-radius: 20px;
 }
 
@@ -258,11 +265,11 @@ background: linear-gradient(0deg,rgba(112, 158, 246, 1) 0%, rgba(46, 207, 228, 1
 }
 
 .linkGroup--sferum::before {
-  background-image: url("./Sferum_Icon.svg");
+  background-image: url("../decor/Sferum_Icon.svg");
 }
 
 .linkGroup--MAX::before {
-  background-image: url("./max-messenger-sign-logo.svg");
+  background-image: url("../decor/max-messenger-sign-logo.svg");
   opacity: 0.3;
 }
 
