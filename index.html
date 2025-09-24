@@ -13,59 +13,54 @@
     <title>МК7 Дистант</title>
   </head>
   <body>
-    <header class="header container">
-      <div class="logo"></div>
-      <div class="title-group">
-        <h1 class="header_title">Медицинский колледж №7</h1>
-        <h2 class="header_subtitle">Дистанционное обучение</h2>
-      </div>
+    <main class="main container">
+      <header class="header">
+        <img
+          class="logo"
+          src="./image/MK7_logo.webp"
+          alt="Логотип медицинского колледжа."
+        />
+        <div class="header-group">
+          <h1 class="header_title">Медицинский колледж №7</h1>
+          <h2 class="header_subtitle">Дистанционное обучение</h2>
+        </div>
 
-      <button class="navigation container">
-        <span class="navigation__decor"></span>
-        <span class="navigation__decor"></span>
-        <span class="navigation__decor"></span>
-      </button>
+        <button class="navigation">
+          <span class="navigation__decor"></span>
+          <span class="navigation__decor"></span>
+          <span class="navigation__decor"></span>
+        </button>
+      </header>
 
-      <div class="linkCollection container visible">
-          <h2 class="linkCollection__title">Список ссылок:</h2>
+      <search class="search">
+        <label class="search_label" for="search__input">поиск:</label>
+        <input class="search__input" type="number" />
+      </search>
 
-      </div>
+      <section class="linkCollection container visible">
+        <h2 class="linkCollection__title">Список ссылок:</h2>
+      </section>
 
-    </header>
-
-    <search class="search container">
-      <label class="search_label" for="search__input">поиск:</label>
-      <input class="search__input" type="number" />
-    </search>
-
-    <section class="list container"></section>
+      <section class="list"></section>
+    </main>
   </body>
 
   <template id="listRow">
-
     <div class="listRow__item listRow__item--style">
       <h3 class="listRow__title">П-101СД</h3>
 
       <div class="linkGroup linkGroup--sferum">
-        <a class="link link__groupSferum link--iconGroup" href="#" target="_blank"
-          >ссылка на группу</a
-        >
-        <a class="link link__callSferum link--iconCall" href="#" target="_blank"
-          >ссылка на звонок</a
-        >
+        <a class="link link__groupSferum link--iconGroup" href="#" target="_blank">ссылка на группу</a>
+        <a class="link link__callSferum link--iconCall" href="#" target="_blank">ссылка на звонок</a>
       </div>
 
       <div class="linkGroup linkGroup--MAX">
-        <a class="link link__groupMAX link--iconGroup" href="#" target="_blank"
-          >ссылка на группу</a
-        >
-        <a class="link link__callMAX link--iconCall" href="#" target="_blank"
-          >ссылка на звонок</a
-        >
+        <a class="link link__groupMAX link--iconGroup" href="#" target="_blank">ссылка на группу</a>
+        <a class="link link__callMAX link--iconCall" href="#" target="_blank">ссылка на звонок</a>
       </div>
+
       <div class="QRCode"></div>
     </div>
-
   </template>
 
   <template id="linkRow">
