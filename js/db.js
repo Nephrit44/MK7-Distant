@@ -202,7 +202,7 @@ arrColletion[22] = {
   groupName: "П-123СД",
   groupLink: "https://sferum.ru/?p=messages&join=dvfvvJS5o1VWcQ3etMhMOkjrs4_4E/6pFgY=", //Ссылка на группу в сферум
   dataGroup: 123,
-  groupSecondLink: "https://clck.ru/3NyrPu", //ссылка на звонок в сферум
+  groupSecondLink: "https://sferum.ru?call_link=W-HUPE_-0JO6DJZAv9KR9096cKuSQf6Yj_9kUbFshR8", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/4y-pvsbktnSeh83wcvCgWgAJwlmzvVqQqlLFYYqinAw", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/psHfKtz3ccHmxKcQWJafivjAgu9kauo6m1TwY-UE2E4",
 };
@@ -220,7 +220,7 @@ arrColletion[24] = {
   groupName: "П-125СД",
   groupLink: "https://sferum.ru/?p=messages&join=T6Zgn/oXeA9zwpKNHtuYfXu3PNiJwuArgHE=", //Ссылка на группу в сферум
   dataGroup: 125,
-  groupSecondLink: "https://clck.ru/3NyrWw", //ссылка на звонок в сферум
+  groupSecondLink: "https://sferum.ru?call_link=5PWIgEl9T_uP3UVIViMVII6reG2Df2yomUXYCiSUw6Y", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/8G6KG3esYCSgk8aVWZv1y6QbZi0xgarfV39taEcAH_Q", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/Wi_8IpXVa6tm2vvDpP69GDZwD4Sn28b13bicOHtMIkU",
 };
