@@ -229,7 +229,7 @@ arrColletion[25] = {
   groupName: "П-126СД",
   groupLink: "https://sferum.ru/?p=messages&join=qWNc_K/Oqi9hS1vFVmEWXu1i6PxDym6WAs8=", //Ссылка на группу в сферум
   dataGroup: 126,
-  groupSecondLink: "https://clck.ru/3NyrYV", //ссылка на звонок в сферум
+  groupSecondLink: "https://sferum.ru?call_link=yELksx8_5jrRD-tSHPAuh5U9Qx9i-TQawTjkEwqArr0", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/9tnFOTiC_KIuFzYtT68hfDNfxyD59_eDovByn1it1Qw", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/X38-oikgYFiqFIDZwCf4vmuTF2z6jzFo3tAmqnotyQ8",
 };
