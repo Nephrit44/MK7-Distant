@@ -40,7 +40,7 @@ arrColletion[4] = {
   dataGroup: 105,
   groupName: "П-105СД",
   sferumGroupLink: "https://sferum.ru/?p=messages&join=pzE_/zO19h194_tsp/aCVLpkMEhzKdpjlr4=", //Ссылка на группу в сферум
-  sferumGroupCall: "https://clck.ru/3NyTfN", //ссылка на звонок в сферум
+  sferumGroupCall: "https://sferum.ru?call_link=QaTPe8srVFqOSRYmn6yS765mhj2UZONFLSyZbjrmo1E", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/Uem7geFD4IPbMT6Rp_oZ-VNpxqPfdwJ_h5bayX3Zj7E", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/FQb3isnGLsPITmVMsaSJm98orMlKTCTJhLfsYYiLltI",
 };
