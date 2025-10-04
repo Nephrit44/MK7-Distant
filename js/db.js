@@ -103,7 +103,7 @@ arrColletion[11] = {
   groupName: "П-112СД",
   groupLink: "https://sferum.ru/?p=messages&join=aggGIo2MVJrkpGlUEDxzyYFqpvZqGAjOpLo=", //Ссылка на группу в сферум
   dataGroup: 112,
-  groupSecondLink: "https://clck.ru/3NyXuo", //ссылка на звонок в сферум
+  groupSecondLink: "https://sferum.ru?call_link=BklgSU_k9ge-YxLYXtDcAnYCBNJihitFfNJkvtRBbB0", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/uqA9q8i1hNryh_O3YN5zSGwn0LPPcTaygvctxBCUutQ", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/AjnGzzDrz0PT16dZMGYJNc_0SiTpbJRDDyP2LYAddEk",
 };
