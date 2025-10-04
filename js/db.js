@@ -166,7 +166,7 @@ arrColletion[18] = {
   dataGroup: 119,
   groupName: "П-119СД",
   sferumGroupLink: "https://sferum.ru/?p=messages&join=WHs42ter6nwtXHzUPb/qEeRii9ewmeXzJqo=", //Ссылка на группу в сферум
-  sferumGroupCall: "https://clck.ru/3NyrAi", //ссылка на звонок в сферум
+  sferumGroupCall: "https://sferum.ru?call_link=YaxPVWxEkFqjProQALjx0qUHe1uXg9z6P99WeZV6t8g", //ссылка на звонок в сферум
   maxGroupLink: "https://max.ru/join/tl0Trcrna5CVeRbo614A6oS2oeW1Yqt_uFctqsSHZf8", //Ссылка на группу в МАКС
   maxGroupCall: "https://max.ru/joincall/iTndvYTgZtcWzqtisEPuupvNE6Mjiy7Xm1q6cFslyuI",
 };
