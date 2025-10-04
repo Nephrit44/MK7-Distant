@@ -255,6 +255,7 @@ body {
   padding-top: 20px;
   border: 1px solid var(--borderCardColor);
   border-radius: 20px;
+  box-shadow: 2px 2px 7px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
 .linkGroup::before {
