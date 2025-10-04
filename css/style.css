@@ -173,6 +173,7 @@ body {
   border: none;
   background-color: var(--colorWhite);
   padding-bottom: 40px;
+  box-shadow: 1px 1px 3px var(--borderCardColor);
 }
 
 .listRow__item--style::before {
