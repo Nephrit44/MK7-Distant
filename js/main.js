@@ -16,14 +16,14 @@ arrColletion.forEach((element) => {
   let newElement = getTemplateCard.content.cloneNode(true); //Создаю клон шаблона карточки
   newElement.querySelector('.listRow__title').textContent =
     element.groupName; //Ищу заголовок и дабавляю ему данные из коллекции
-  newElement.querySelector('.link__groupSferum').href = element.groupLink; //Ссылка на группу сферум
-  newElement.querySelector('.link__callSferum').href = element.groupSecondLink; //Ссылка на звонок сферум
+  newElement.querySelector('.link__groupSferum').href = element.sferumGroupLink; //Ссылка на группу сферум
+  newElement.querySelector('.link__callSferum').href = element.sferumGroupCall; //Ссылка на звонок сферум
 
   newElement.querySelector('.link__groupMAX').href = element.maxGroupLink; //Ссылка на группу MAX
   newElement.querySelector('.link__callMAX').href = element.maxGroupCall; //Ссылка на звонок MAX
   generateQRCode(
     newElement.querySelector('.QRCode'),
-    element.groupSecondLink
+    element.sferumGroupCall
   );
   newElement.querySelector('.listRow__item').dataset.group =
     element.dataGroup;
@@ -82,7 +82,7 @@ function showLinkCollection() {
   arrColletion.forEach((element) => {
     let newElement = getTemplateLinkCollection.content.cloneNode(true); //Создаю клон шаблона строки с сылками
     newElement.querySelector('.link__title').textContent = element.groupName;
-    newElement.querySelector('.link__content').textContent = element.groupLink;
+    newElement.querySelector('.link__content').textContent = element.sferumGroupLink;
     linkCollection.append(newElement);
   });
 }
