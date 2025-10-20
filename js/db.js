@@ -35,7 +35,7 @@ const arrColletion = [
   {
     dataGroup: 105,
     groupName: "П-105СД",
-    sferumGroupCall: "https://sferum.ru?call_link=AqZn8jLpVl_JknCUhr9-UGCRN7qrO6kGjicvJ95Zfo8", 
+    sferumGroupCall: "https://sferum.ru?call_link=DxVWYh9bqnHGjkiNK9QCZ8iXne2wt-X1oBDka6nY9jY", 
     sferumGroupLink: "https://sferum.ru/?p=messages&join=pzE_/zO19h194_tsp/aCVLpkMEhzKdpjlr4=", 
     maxGroupLink: "https://max.ru/join/Uem7geFD4IPbMT6Rp_oZ-VNpxqPfdwJ_h5bayX3Zj7E", 
     maxGroupCall: "https://max.ru/joincall/FQb3isnGLsPITmVMsaSJm98orMlKTCTJhLfsYYiLltI",
