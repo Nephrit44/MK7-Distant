@@ -83,7 +83,7 @@ const arrColletion = [
   {
     dataGroup: 111,
     groupName: "П-111СД",
-    sferumGroupCall: "https://sferum.ru?call_link=4qg2cgVEzTWMl6lSIRlKoMGWfhmDNHdFWQHpseogl4M", 
+    sferumGroupCall: "https://sferum.ru?call_link=yU6hrygeoY0Vpqe4CwHpyC0baGohBMbVFSpk5J0FOb0", 
     sferumGroupLink: "https://sferum.ru/?p=messages&join=2C1V9dsy62RO9xMwaXP6tqRfMGsd6eaY/b4=", 
     maxGroupLink: "https://max.ru/join/yYn6Cx65zCzlZHFobR5qP695exZXr97dAiKZh4TV7Fg", 
     maxGroupCall: "https://max.ru/joincall/AjnGzzDrz0PT16dZMGYJNc_0SiTpbJRDDyP2LYAddEk",
@@ -147,7 +147,7 @@ const arrColletion = [
   {
     dataGroup: 119,
     groupName: "П-119СД",
-    sferumGroupCall: "https://sferum.ru?call_link=Y9KfLikUnHluYEFy_qyynqdguU2vq2tEGG3uqjOeuho", 
+    sferumGroupCall: "https://sferum.ru?call_link=p8aF_Fxb0uGhrOs1Hfnw9tZXoDHtgnBI5MEfmMnwS_0", 
     sferumGroupLink: "https://sferum.ru/?p=messages&join=WHs42ter6nwtXHzUPb/qEeRii9ewmeXzJqo=", 
     maxGroupLink: "https://max.ru/join/tl0Trcrna5CVeRbo614A6oS2oeW1Yqt_uFctqsSHZf8", 
     maxGroupCall: "https://max.ru/joincall/iTndvYTgZtcWzqtisEPuupvNE6Mjiy7Xm1q6cFslyuI",
