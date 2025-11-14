@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>МК7 Дистант</title>
-  </head>
-  <body>
-    <main class="main container">
-      <header class="header">
-        <img
-          class="logo"
-          src="./image/MK7_logo.webp"
-          alt="Логотип медицинского колледжа."
-        />
-        <div class="header-group">
-          <h1 class="header_title">Медицинский колледж №7</h1>
-          <h2 class="header_subtitle">Дистанционное обучение</h2>
-        </div>
 
-        <button class="navigation">
-          <span class="navigation__decor"></span>
-          <span class="navigation__decor"></span>
-          <span class="navigation__decor"></span>
-        </button>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>МК7 Дистант</title>
+</head>
 
-      <search class="search">
-        <label class="search_label" for="search__input">поиск:</label>
-        <input class="search__input" type="number" />
-      </search>
-
-      <section class="linkCollection container visible">
-        <h2 class="linkCollection__title">Список ссылок:</h2>
-      </section>
-
-      <section class="list"></section>
-    </main>
-  </body>
-
-  <template id="listRow">
-    <div class="listRow__item listRow__item--style">
-      <h3 class="listRow__title"></h3>
-
-      <div class="linkGroup linkGroup--sferum">
-        <a class="link link__groupSferum link--iconGroup" href="#" target="_blank">ссылка на группу</a>
-        <a class="link link__callSferum link--iconCall" href="#" target="_blank">ссылка на звонок</a>
+<body>
+  <main class="main container">
+    <header class="header">
+      <img class="logo" src="./image/MK7_logo.webp" alt="Логотип медицинского колледжа." />
+      <div class="header-group">
+        <h1 class="header_title">Медицинский колледж №7</h1>
+        <h2 class="header_subtitle">Дистанционное обучение</h2>
       </div>
 
-      <div class="linkGroup linkGroup--MAX visible">
-        <a class="link link__groupMAX link--iconGroup" href="#" target="_blank">ссылка на группу</a>
-        <a class="link link__callMAX link--iconCall" href="#" target="_blank">ссылка на звонок</a>
-      </div>
+      <button class="navigation">
+        <span class="navigation__decor"></span>
+        <span class="navigation__decor"></span>
+        <span class="navigation__decor"></span>
+      </button>
+    </header>
 
-      <div class="QRCode"></div>
+    <search class="search">
+      <label class="search_label" for="search__input">поиск:</label>
+      <input class="search__input" type="number" />
+    </search>
+
+    <section class="linkCollection container visible">
+      <h2 class="linkCollection__title">Список ссылок:</h2>
+    </section>
+
+    <section class="list"></section>
+  </main>
+</body>
+
+<template id="listRow">
+  <div class="listRow__item listRow__item--style">
+    <h3 class="listRow__title"></h3>
+
+    <div class="linkGroup linkGroup--sferum">
+      <a class="link link__groupSferum link--iconGroup" href="#" target="_blank">ссылка на группу</a>
+      <a class="link link__callSferum link--iconCall" href="#" target="_blank">ссылка на звонок</a>
+      <button class="button button--iconQRcode" data-qrcode="" type="button">получить QR-code</button>
     </div>
-  </template>
 
-  <template id="linkRow">
-    <div class="link__container">
-      <h3 class="link__title"></h3>
-      <textarea class="link__content" rows="2"></textarea>
+    <div class="linkGroup linkGroup--MAX visible">
+      <a class="link link__groupMAX link--iconGroup" href="#" target="_blank">ссылка на группу</a>
+      <a class="link link__callMAX link--iconCall" href="#" target="_blank">ссылка на звонок</a>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-  <script src="./js/db.js"></script>
-  <script src="./js/main.js"></script>
+<template id="linkRow">
+  <div class="link__container">
+    <h3 class="link__title"></h3>
+    <textarea class="link__content" rows="2"></textarea>
+  </div>
+</template>
+
+<dialog class="popup visible" id="qrCode">
+  <div class="popup__wrapper">
+    <h2 class="popup__title"></h2>
+    <div class="popup__img"></div>
+    <button class="popup_button" type="button">закрыть</button>
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+<script src="./js/db.js"></script>
+<script src="./js/main.js"></script>
+
 </html>

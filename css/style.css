@@ -48,6 +48,7 @@ body {
   background-color: var(--bodyBackground);
   margin: 0;
   padding: 20px;
+  position: relative;
 }
 
 .container {
@@ -216,7 +217,8 @@ body {
   justify-content: center;
 }
 
-.link {
+.link,
+.button--iconQRcode {
   position: relative;
   display: block;
   text-decoration: none;
@@ -226,10 +228,11 @@ body {
   padding: 10px 40px;
   border-radius: 10px;
   color: var(--colorWhite);
-  text-align: center;
+  cursor: pointer;
 }
 
-.link::before {
+.link::before,
+.button--iconQRcode::before {
   position: absolute;
   content: "";
   background-position: center;
@@ -242,12 +245,28 @@ body {
   transform: translateY(-50%);
 }
 
+.button {
+  background-color: var(--linkColor);
+  font-size: 22px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: var(--colorWhite);
+  border: 1px solid transparent;
+  width: 100%;
+  text-align: left;
+}
+
+
 .link--iconGroup::before {
   background-image: url("../decor/group.svg");
 }
 
 .link--iconCall::before {
   background-image: url("../decor/callSferum.svg");
+}
+
+.button--iconQRcode::before {
+  background-image: url("../decor/qr-code.svg");
 }
 
 .linkGroup {
@@ -324,9 +343,62 @@ body {
   line-height: 0;
 }
 
+.popup {
+  position: fixed;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  inset: 0;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  z-index: 3;
+}
+
+.popup__wrapper {
+  position: absolute;
+  padding: 20px;
+  min-width: 50%;
+  min-height: 50%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+  border-radius: 10px;
+}
+
+.popup__title {
+  font-family: var(--mainFont);
+  color: #333333;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.popup_button {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.popup__img {
+  display: flex;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .visible {
   display: none;
 }
+
 
 @media (min-width: 800px) {
   .container {
@@ -340,4 +412,5 @@ body {
   .linkCollection {
     min-width: var(--sectionWidth);
   }
+
 }

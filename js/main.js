@@ -9,6 +9,12 @@ const decorElement = document.querySelectorAll('.navigation__decor'); //Найт
 const linkCollection = document.querySelector('.linkCollection'); //Ищем контейнер куда будут вставлятся ссылки
 const getTemplateLinkCollection = document.querySelector('#linkRow'); //Ищем шаблон со строкой для ссылок
 
+const popup = document.querySelector('#qrCode');
+const popupButtonClose = document.querySelector('.popup_button');
+const buttonCollectionCreateQRcode = document.querySelectorAll('.button--iconQRcode');
+const popupIMG = popup.querySelector('.popup__img');
+const popupTitle = popup.querySelector('.popup__title');
+
 showLinkCollection(); //Выводим список в выпадающем меню
 
 //Загрузка списка коллекции
@@ -21,25 +27,12 @@ arrColletion.forEach((element) => {
 
   newElement.querySelector('.link__groupMAX').href = element.maxGroupLink; //Ссылка на группу MAX
   newElement.querySelector('.link__callMAX').href = element.maxGroupCall; //Ссылка на звонок MAX
-  generateQRCode(
-    newElement.querySelector('.QRCode'),
-    element.sferumGroupCall
-  );
+  newElement.querySelector('.button--iconQRcode').dataset.qrcode = element.sferumGroupLink;
+
   newElement.querySelector('.listRow__item').dataset.group =
     element.dataGroup;
   getlist.append(newElement);
 });
-
-function generateQRCode(placeElement, urlLink) {
-  const qrcode = new QRCode(placeElement, {
-    text: urlLink,
-    width: 128,
-    height: 128,
-    colorDark: "#000",
-    colorLight: "#fff",
-    correctLevel: QRCode.CorrectLevel.H,
-  });
-}
 
 searchInput.addEventListener('input', function () {
   console.log(searchInput.value);
@@ -84,5 +77,33 @@ function showLinkCollection() {
     newElement.querySelector('.link__title').textContent = element.groupName;
     newElement.querySelector('.link__content').textContent = element.sferumGroupLink;
     linkCollection.append(newElement);
+  });
+}
+
+//Обработка нажатия на кнопку открыть QR
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('button--iconQRcode')) {
+    popupIMG.innerHTML = "";  
+    generateQRCode(
+      popupIMG,
+      e.target.dataset.qrcode
+    );
+    popup.classList.remove('visible');
+  };
+})
+
+
+popupButtonClose.addEventListener('click', function () {
+  popup.classList.add('visible');
+})
+
+function generateQRCode(placeElement, urlLink) {
+  const qrcode = new QRCode(placeElement, {
+    text: urlLink,
+    width: 256,
+    height: 256,
+    colorDark: "#000",
+    colorLight: "#fff",
+    correctLevel: QRCode.CorrectLevel.H,
   });
 }
