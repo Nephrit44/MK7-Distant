@@ -246,6 +246,7 @@ body {
 }
 
 .button {
+  font-family: var(--mainFont);
   background-color: var(--linkColor);
   font-size: 22px;
   padding: 10px 40px;
