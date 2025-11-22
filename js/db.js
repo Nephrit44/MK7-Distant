@@ -59,7 +59,7 @@ const arrColletion = [
   {
     dataGroup: 108,
     groupName: "П-108СД",
-    sferumGroupCall: "https://sferum.ru?call_link=vxqOhhgkgqILbEowcy42HRnz9kMxdLscuh5xBR6tyQY",
+    sferumGroupCall: "https://sferum.ru?call_link=URzmNZRVrIfizbyLj3H0gRkKPlSmKaidjnVKCY9oLMY",
     sferumGroupLink: "https://sferum.ru/?p=messages&join=UlNfXrsEWPsJDM5jQjnvhyCpHi60CpfbUKI=",
     maxGroupLink: "https://max.ru/join/oACIwHAy3dUQYmyNt5Vexf7CySkfZqVCRt5nH96zMLI",
     maxGroupCall: "https://max.ru/joincall/t9CrKQemRnBOfW0xdG0i4oNXx10t0rZVJZu87oDaoxk",
