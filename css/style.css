@@ -303,16 +303,6 @@ body {
 
 .linkGroup--MAX::before {
   background-image: url("../decor/max-messenger-sign-logo.svg");
-  opacity: 0.3;
-}
-
-.linkGroup--MAX::after {
-  position: absolute;
-  content: "с 04.10.25";
-  top: -17px;
-  left: 37%;
-  transform: rotate(-20deg);
-  z-index: 3;
 }
 
 .search {
