@@ -190,7 +190,7 @@ const arrColletion = [
     sferumGroupCall: "https://sferum.ru?call_link=nolxU5qMDFW_es6lSLIFTmlb_qRw1jMjrT-p1aB2XYY",
     sferumGroupLink: "https://sferum.ru/?p=messages&join=WR_sGHnBqpQjdQMmP1Cpwvi_zbPoOXCqwHM=",
     maxGroupLink: "https://max.ru/join/RIgTs4GyyjeKn2hn6S4gWKIPo4TRI_JpE6mk-QDC9xM",
-    maxGroupCall: "https://max.ru/joincall/BvNK73atNzw_eG_ReJhfx4Qc0diaCdXENhRJgcwr6ow",
+    maxGroupCall: "https://max.ru/joincall/7US_PPw3sj2gk74L1qZr079ah83wt6KoZDsEhQG1UXQ",
   },
   {
     dataGroup: 125,
