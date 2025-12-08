@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css" />
   <title>МК7 Дистант</title>
 </head>
@@ -15,66 +17,70 @@
 <body>
   <main class="main container">
     <header class="header">
-      <img class="logo" src="./image/MK7_logo.webp" alt="Логотип медицинского колледжа." />
-      <div class="header-group">
-        <h1 class="header_title">Медицинский колледж №7</h1>
-        <h2 class="header_subtitle">Дистанционное обучение</h2>
-      </div>
 
-      <button class="navigation">
-        <span class="navigation__decor"></span>
-        <span class="navigation__decor"></span>
-        <span class="navigation__decor"></span>
-      </button>
-    </header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand vertical-align" href="#">
+            <img class="d-inline-block align-text-top logo" src="./image/MK7_logo.webp" alt="Logo">
+            МК7: Дистант
+          </a>
 
-    <search class="search">
-      <label class="search_label" for="search__input">поиск:</label>
-      <input class="search__input" type="number" />
-    </search>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button class="nav-link active" type="button" data-navBtn="main">Карточки групп</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" type="button" data-navBtn="navList">Прямые ссылки</button>
+            </li>
+          </ul>
 
-    <section class="linkCollection container visible">
-      <h2 class="linkCollection__title">Список ссылок:</h2>
-    </section>
+          <form class="d-flex search" role="search">
+            <input class="form-control me-2 searchInput" type="number" placeholder="Поиск" aria-label="Поиск">
+          </form>
+        </div>
+      </nav>
 
-    <section class="list"></section>
+      <!--Карточки групп-->
+      <section class="card-list"></section>
+
+      <!--Сылки для администрации-->
+      <section class="linkCollection container visible">
+        <h2 class="linkCollection__title">Список ссылок:</h2>
+        <ol class="list-group linksRow list-group-numbered">
+
+        </ol>
+      </section>
+
   </main>
 </body>
 
-<template id="listRow">
-  <div class="listRow__item listRow__item--style">
-    <h3 class="listRow__title"></h3>
+<!--Карточки групп-->
+<template id="cardTemplate">
 
-    <div class="linkGroup linkGroup--sferum visible">
-      <a class="link link__groupSferum link--iconGroup" href="#" target="_blank">ссылка на группу</a>
-      <a class="link link__callSferum link--iconCall" href="#" target="_blank">ссылка на звонок</a>
-      <button class="button button--iconQRcode" data-qrcode="" type="button">получить QR-code</button>
-    </div>
-
-    <div class="linkGroup linkGroup--MAX">
-      <a class="link link__groupMAX link--iconGroup" href="#" target="_blank">ссылка на группу</a>
-      <a class="link link__callMAX link--iconCall" href="#" target="_blank">ссылка на звонок</a>
+  <div class="card" data-groupid>
+    <img class="card-img-top" src="" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">Группа для дистанционного обучения в MAX</p>
+      <a href="#" class="btn btn-outline-primary link__groupMAX">Перейти в группу</a>
     </div>
   </div>
+  <!--
+    <a class="link link__groupSferum link--iconGroup" href="#" target="_blank">ссылка на группу</a>
+    <a class="link link__callSferum link--iconCall" href="#" target="_blank">ссылка на звонок</a>
+  -->
 </template>
 
+<!--Сылки для администрации-->
 <template id="linkRow">
-  <div class="link__container">
-    <h3 class="link__title"></h3>
-    <textarea class="link__content" rows="2"></textarea>
-  </div>
+  <li class="list-group-item linkRow"></li>
 </template>
 
-<dialog class="popup visible" id="qrCode">
-  <div class="popup__wrapper">
-    <h2 class="popup__title"></h2>
-    <div class="popup__img"></div>
-    <button class="popup_button" type="button">закрыть</button>
-  </div>
-</dialog>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 <script src="./js/db.js"></script>
+<script src="./js/search.js"></script>
 <script src="./js/main.js"></script>
 
 </html>
