@@ -292,8 +292,8 @@ const arrColletion = [
     groupIMG:"127.webp",
     sferumGroupCall: "https://sferum.ru?call_link=mtPqcZVA8oo8A47-p9EQO84HIycORPzhtXOr8EHO4fc",
     sferumGroupLink: "https://sferum.ru/?p=messages&join=/u/xFzWiQAU_KWrKfeH0ZbzLi4tyondAt/k=",
-    maxGroupLink: "",
-    maxGroupCall: "",
+    maxGroupLink: "https://sferum.ru/?p=messages&join=/u/xFzWiQAU_KWrKfeH0ZbzLi4tyondAt/k=",
+    maxGroupCall: "https://sferum.ru?call_link=mtPqcZVA8oo8A47-p9EQO84HIycORPzhtXOr8EHO4fc",
   }
 ];
 
