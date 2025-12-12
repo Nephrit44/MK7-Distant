@@ -8,8 +8,6 @@ arrColletion.forEach((element) => {
   newElement.querySelector('.card').setAttribute('data-groupid', element.dataGroup);
   newElement.querySelector('.card-title').textContent = element.groupName; //Ищу заголовок и дабавляю ему данные из коллекции
   newElement.querySelector('.card-img-top').src = "./image/" + element.groupIMG;
-  //newElement.querySelector('.link__groupSferum').href = element.sferumGroupLink; //Ссылка на группу сферум
-  //newElement.querySelector('.link__callSferum').href = element.sferumGroupCall; //Ссылка на звонок сферум
 
   newElement.querySelector('.link__groupMAX-mobile').href = element.maxGroupLinkMobile; //Ссылка на группу MAX
   newElement.querySelector('.link__groupMAX-pc').href = element.maxGroupLinkPC; //Ссылка на группу MAX

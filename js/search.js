@@ -24,8 +24,7 @@ searchInput.addEventListener('input', function () {
 function showLinkCollection() {
     arrColletion.forEach((element) => {
         let newElement = getTemplateLinkCollection.content.cloneNode(true); //Создаю клон шаблона строки с сылками
-        //newElement.querySelector('.link__title').textContent = element.groupName;
-        newElement.querySelector('.linkRow').textContent = element.maxGroupLink;
+        newElement.querySelector('.linkRow').textContent = element.maxGroupLinkPC;
         linkCollection.append(newElement);
     });
 }
