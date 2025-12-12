@@ -12,8 +12,6 @@ arrColletion.forEach((element) => {
   //newElement.querySelector('.link__callSferum').href = element.sferumGroupCall; //Ссылка на звонок сферум
 
   newElement.querySelector('.link__groupMAX').href = element.maxGroupLink; //Ссылка на группу MAX
-  //newElement.querySelector('.link__callMAX').href = element.maxGroupCall; //Ссылка на звонок MAX
-  //newElement.querySelector('.button--iconQRcode').dataset.qrcode = element.sferumGroupLink;
 
   getlist.append(newElement);
 });
