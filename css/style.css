@@ -114,6 +114,12 @@ body {
   justify-content: center;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .visible {
   display: none;
 }
